@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEPT TABLE</title>
+  <style>
+    table{
+      border: 3px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>Dept Table</h1>
+    <table border="2px" cellpadding="10px" cellspacing="5px">
+      <tr>
+        <th>DEPT_NO</th>
+        <th>DNAME</th>
+        <th>LOC</th>
+      </tr>
+      {% for do in Depts %}
+      <tr>
+        <td>{{do.DEPT_NO}}</td>
+        <td>{{do.DNAME}}</td>
+        <td>{{do.LOC}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+  
+  </center>
+</body>
+</html>

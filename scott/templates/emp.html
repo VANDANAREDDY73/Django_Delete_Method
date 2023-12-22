@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Employee Table</title>
+  <style>
+    table{
+      border: 3px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>Emp Table</h1>
+
+    <table border="2px" cellpadding="10px" cellspacing="5px">
+      <tr>
+        <th>PK NO.</th>
+        <th>EMPNO</th>
+        <th>ENAME</th>
+        <th>JOB</th>
+        <th>MGR</th>
+        <th>HIREDATE</th>
+        <th>SAL</th>
+        <th>COMM</th>
+        <th>DEPT_NO</th>
+      </tr>
+
+      {% for eo in Emps %}
+      <tr>
+        <td>{{eo.pk}}</td>
+        <td>{{eo.EMPNO}}</td>
+        <td>{{eo.ENAME}}</td>
+        <td>{{eo.JOB}}</td>
+        <td>{{eo.MGR}}</td>
+        <td>{{eo.HIREDATE}}</td>
+        <td>{{eo.SAL}}</td>
+        <td>{{eo.COMM}}</td>
+        <td>{{eo.DEPT_NO}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </center>
+</body>
+</html>

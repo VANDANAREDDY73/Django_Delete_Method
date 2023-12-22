@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Salgrade</title>
+  <style>
+    table{
+      border: 3px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>Salgrade Table</h1>
+    <table border="2px" cellpadding="10px" cellspacing="5px">
+      <tr>
+        <th>PK</th>
+        <th>GRADE</th>
+        <th>LOSAL</th>
+        <th>HISAL</th>
+      </tr>
+      {% for so in Sals%}
+      <tr>
+        <td>{{so.pk}}</td>
+        <td>{{so.GRADE}}</td>
+        <td>{{so.LOSAL}}</td>
+        <td>{{so.HISAL}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </center>
+</body>
+</html>
